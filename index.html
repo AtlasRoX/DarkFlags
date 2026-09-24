@@ -119,6 +119,21 @@
     }
 
     /* 111001*/
+    body {
+      font-family: var(--font-ui);
+      font-size: 13px;
+      line-height: 1.5;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+
 
     /* WCAG 2.2 AA Focus Indicators */
     :focus-visible {
@@ -1095,9 +1110,9 @@
       justify-content: space-between;
     }
     .atlas-title {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.05em;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--text-primary);
     }
@@ -4561,6 +4576,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     rows.forEach(r => tbody.appendChild(r));
   });
 
+/* 111003*/
   // Network authorization actions
   $("#btnRunNetworkLookups").addEventListener("click", enableNetworkInspection);
   $("#btnDisableNetworkLookups").addEventListener("click", disableNetworkInspection);
@@ -4568,7 +4584,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     disableNetworkInspection();
     alert("Local-only mode enforced. External network lookups will remain disabled.");
   });
-
 
   // Methodology accordion triggers
   $$(".accordion-trigger").forEach(btn => {
